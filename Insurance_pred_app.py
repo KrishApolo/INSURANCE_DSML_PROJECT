@@ -1,22 +1,28 @@
 import pickle
 import streamlit as st
 
-Diabetes = st.selectbox(" Are you having Diabetes ",
-['Yes','No',])
-BPProblems = st.selectbox(" Are you having BP ",
-['Yes','No',])
-AnyTransplants = st.selectbox(" Did you have any Transplants ",
-['Yes','No',])
-AnyChronicDiseases = st.selectbox(" Are you having AnyChronic Diseases ",
-['Yes','No',])
-KnownAllergies = st.selectbox(" Are you having Any Known Allergies ",
-['Yes','No',])
-HistoryOfCancer = st.selectbox(" Are you having Any History of Cancer in your Family ",
-['Yes','No',])
-Age = st.number_input('Age', 18, 100)
-Height = st.number_input('Height', 130, 200)
-Weight = st.number_input('Weight', 50, 300)
-NumberofMajorSurgeries = st.slider('no of major surgeries', 0, 3)
+st.header("Insurance Premium Prediction")
+
+col1, col2 = st.columns(2)
+
+Age = st.number_input('Please enter your Age', 18, 100)
+Height = col1.number_input('Please enter your height', 130, 200)
+Weight = col2.number_input('Please enter your weight', 50, 300)
+
+Diabetes = col1.selectbox(" Are you having Diabetes ",
+['No','Yes'])
+BPProblems = col1.selectbox(" Are you having BP",
+['No','Yes'])
+AnyTransplants = col1.selectbox(" Did you had any Transplants ",
+['No','Yes'])
+AnyChronicDiseases = col2.selectbox(" Are you Diagnosed with any Chronic diseases ",
+['No','Yes'])
+KnownAllergies = col2.selectbox(" Are you having any Allergies ",
+['No','Yes'])
+HistoryOfCancer = col2.selectbox(" Are you having any History of Cancer in your Family ",
+['No','Yes'])
+
+NumberofMajorSurgeries = st.number_input('Any number of major surgeries you undergone ', 0, 3)
 
 encode_values = {
 "Diabetes": {"Yes":1,"No":0},
@@ -46,7 +52,7 @@ if(st.button("Predict Premium Price")):
 
  price = model_pred(Diabetes_e, BPProblems_e, AnyTransplants_e, AnyChronicDiseases_e,
                     KnownAllergies_e, HistoryOfCancer_e, Age, Height, Weight, NumberofMajorSurgeries)
- st.text("Precited Premium Price is: "+str(price))
+ st.text("Predicted Premium Price is: "+str(price))
 
 
 
