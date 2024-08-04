@@ -69,5 +69,27 @@ Deplyment was made by pycharm using stremlit software, encountered a few issues 
 Application Link:
 https://insurancepredapppy-67smzxjhpfjekaurmxujzx.streamlit.app/
 
+**Recommendations:**
+Diabetes and BP are most common problems and more than 50% clients are having these issues, however they are not much contributing to surgical issues.
+They can be less prioritized while factoring Risk association.
+
+Premium Price is highly dependent on number of surgeries, this should be considered as risk factor.
+
+Most of the clients are aged between 30-50, It will be good to come up with new plans to involve 25-30 age group clients.
+
+However Chronic diseases and other Surgical issues are prone to show up at early ages, it should be considered as risk factor for future issues.
+
+History of Cancer in Family and known allergies are not highly influential for any other health issues, these can be considered  less significant.
+
+BMI is highly influential on Premium Prices, higher weight and lower height and vice-versa have higher premiums.
+
+New plans need to be suggested for 25-30 Age group clientele to expand the customer base.
+
+Elderly people with accurate BMI and minimal surgical risks should be offered discounted premiums.
+
+Premiums need to be revised and can be slightly higher with clients having surgical issues.
+
+
+
 
 
