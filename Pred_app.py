@@ -35,7 +35,7 @@ encode_values = {
 
 def model_pred(Diabetes_e, BPProblems_e, AnyTransplants_e, AnyChronicDiseases_e,
                     KnownAllergies_e, HistoryOfCancer_e, Age, Height, Weight, NumberofMajorSurgeries):
- with open('IA.pkl','rb') as file:
+ with open('Analys.pkl','rb') as file:
   model = pickle.load(file)
   new_X = [[Age,Diabetes_e,BPProblems_e,AnyTransplants_e,AnyChronicDiseases_e,Height,
             Weight,KnownAllergies_e,HistoryOfCancer_e,NumberofMajorSurgeries]]
